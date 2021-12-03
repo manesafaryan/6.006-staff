@@ -8,7 +8,7 @@ function quicksort(arr, l, r) {
 function partition(arr, l, r) {
   let pivot = arr[r];
   let i = l - 1;
-  for (j = r; j < r; j++) {
+  for (j = l; j < r; j++) {
     if (arr[j] <= pivot) {
       i = i + 1;
       let temp = arr[i];
@@ -24,4 +24,4 @@ function partition(arr, l, r) {
 
 let arr = [5, 1, 4, 7, 2, 3, 6, 9];
 console.log(quicksort(arr, 0, 7));
-console.log(arr)
+console.log(arr);
