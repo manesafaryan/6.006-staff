@@ -11,17 +11,21 @@ class Node {
       this.root = null;
       this.parent = null;
     }
+
     subtreeAt() {
       
     }
+
     subtreeFirst(node) {
       if (node.left == null) return node;
       return this.subtreeFirst(node.left);
     }
+
     subtreeLast(node) {
       if (node.right === null) return node;
       return this.subtreeLast(node);
     }
+
     successor(node) {
       if (node.right) return this.subtreeFirst(node.right);
       while (node) {
@@ -29,6 +33,7 @@ class Node {
         node = node.parent;
       }
     }
+
     predecessor(node) {
       if (node.left) return node.left;
       while (node) {
@@ -41,6 +46,7 @@ class Node {
       if (this.root === null) this.root = node;
       else this.insertNode(this.root, node);
     }
+
     insertNode(node, newNode) {
       if(node === null) return newNode
       if(newNode.value > node.value) {
@@ -49,6 +55,7 @@ class Node {
       else node.left = this.insertNode(node, newNode)
       return node
     }
+
     delete(node) {
       if (!node.left && !node.right) {
         if (node.parent.left === node) {node.parent.left = null; return}
@@ -68,6 +75,7 @@ class Node {
       }
       this.delete(node)
     }
+
     inOrder() {
       function inOrderTraversal(node) {
         if (node == null) return;
@@ -77,6 +85,7 @@ class Node {
       }
       inOrderTraversal(this.root);
     }
+
     preOrder() {
       function preOrderTraversal(node) {
         if (node === null) return;
@@ -86,6 +95,7 @@ class Node {
       }
       preOrderTraversal(this.root);
     }
+    
     postOrder() {
       function postOrderTraversal(node) {
         if (node === null) return;
