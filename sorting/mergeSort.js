@@ -43,10 +43,7 @@ function merge(arr, l, m, r) {
     merge(arr, l, m, r);
   }
   
-  function printArray(A, size) {
-    for (var i = 0; i < size; i++) console.log(A[i] + " ");
-  }
-  var arr = [12, 11, 13, 5, 6, 7, 58, 2];
-  var arr_size = arr.length;
-  mergeSort(arr, 0, arr_size - 1);
-  printArray(arr, arr_size);
+  const arr = [12, 11, 13, 5, 6, 7, 58, 2];
+  const size = arr.length;
+  mergeSort(arr, 0, size - 1);
+  console.log(arr)
