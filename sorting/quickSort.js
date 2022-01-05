@@ -5,6 +5,7 @@ function quicksort(arr, l, r) {
     quicksort(arr, p + 1, r);
   }
 }
+
 function partition(arr, l, r) {
   let pivot = arr[r];
   let i = l - 1;
@@ -16,6 +17,7 @@ function partition(arr, l, r) {
       arr[j] = temp;
     }
   }
+
   let temp = arr[i + 1];
   arr[i + 1] = arr[r];
   arr[r] = temp;
